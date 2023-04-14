@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border-radius: 2rem;
+  border: 3px solid #1c0056;
+  outline: none;
+  transition: border-color 0.5s ease-in-out;
+  background-color: #370895; /* Añadir color de fondo */
+  color: #ffffff; /* Añadir color de texto */
+  padding: 1em 2em;
+  opacity: 55%;
+}
+
+.search__input:hover,
+.search__input:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+  border-color: transparent;
+}
+
+
+
+
+.error {
+  margin-top: 0.5rem;
+  color: red;
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.button__container button {
+  background: #1d086a;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  border-radius: 10px;
+  border-color: #000000;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color:#ffffff;
+  transition: 0.25s;
+  opacity: 65%;
+}
+
+/* Cambiar el color de fondo en hover */
+.pulse:hover,
+.pulse:focus {
+  background-color: #150ab4;
+}
+
+/* Agregar borde en hover */
+.pulse:hover,
+.pulse:focus {
+  border-color: #aeaeae;
+  box-shadow: none;
+}
+/* Agregar la animación */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #4d06ff;
+  }
+  100% {
+    box-shadow: 0 0 0 2em transparent;
+  }
+}
+/* Agregar una animación al hacer hover */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #6027c3;
+  }
+  100% {
+    box-shadow: 0 0 0 2em transparent;
+  }
+}
+
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+
+
+
+

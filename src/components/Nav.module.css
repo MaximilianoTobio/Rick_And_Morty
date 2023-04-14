@@ -1,0 +1,93 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    height: 60px;
+    padding: 0 10px;
+    }
+    .nav button {
+    padding: 10px;
+    font-size: 20px;
+    color: #ff0000;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #dcdc50;
+    transition: background-color 0.3s;
+    opacity: 65%;
+    }
+
+    .logout a {
+    padding: 10px;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #dcdc50;
+    transition: background-color 0.3s;
+    opacity: 65%;
+    }
+ 
+    /* Cambiar el color de fondo en hover */
+.pulse:hover,
+.pulse:focus {
+  background-color: #dada0e;
+}
+
+/* Agregar borde en hover */
+.pulse:hover,
+.pulse:focus {
+  border-color: #1bc6da;
+  box-shadow: none;
+}
+/* Agregar la animación */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #4d06ff;
+  }
+  100% {
+    box-shadow: 0 0 0 2em transparent;
+  }
+}
+/* Agregar una animación al hacer hover */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #1b96be;
+  }
+  100% {
+    box-shadow: 0 0 0 2em transparent;
+  }
+}
+
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .logoContainer {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-top:100px;
+    margin-bottom: 65px;
+    }
+
+    .logo {
+    width: 100%;
+    height: auto;
+    }
+      
+    

@@ -1,0 +1,105 @@
+
+.p {
+  color: #ff0000;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  border: 1px solid #2b0b6b;
+  border-radius: 25px;
+  background-color: #4415bb;
+  text-align: center;
+  opacity: 90%;
+  
+}
+
+form label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 0px 10px 0px rgba(163, 163, 163, 0.7);
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease-in-out; 
+}
+  form input:focus {
+  outline: none; /* Eliminar contorno al estar activo */
+  }
+  .validInput {
+    font-size: 17px;
+    font-style: italic;
+    color: green;
+    box-shadow: 0 0 20px rgb(33, 253, 44);
+  }
+  
+
+.inputError {
+  border: 2px solid #ff3333;
+  box-shadow: 0 0 10px rgb(226, 5, 5);
+}
+
+.passwordContainer {
+  display: flex;
+  align-items: center;
+}
+
+.passwordContainer label {
+  margin-right: 10px;
+}
+
+.passwordContainer input[type="password"] {
+  flex: 1;
+}
+
+.passwordContainer button {
+  margin-left: 10px;
+  padding: 5px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+.send {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0ca3bb;
+  color: #020202;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.send:hover {
+  background-color: #ffffff;
+  color: #0ca3bb;
+}
+.send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
