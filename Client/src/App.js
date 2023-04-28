@@ -29,25 +29,36 @@ function App() {
       que se utilizará para actualizar el valor del estado access.
       */
    });
-   const EMAIL = 'max@max.com';
-   const PASSWORD = 'maxtobio123';
+   // const EMAIL = 'max@max.com';
+   // const PASSWORD = 'maxtobio123';
 
    function login(userData) {
-      if (userData.email === '' || userData.password === '') {
-        return window.alert('¡Completa los campos para poder ingresar!');
-      }
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-        localStorage.setItem('access', true);
-        setAccess(true);
-        /*
-        se actualiza el valor almacenado en el localStorage bajo la clave access con el valor true.
-         Luego se actualiza el estado local access con el valor true utilizando la función setAccess.
-        */
-        navigate('/home');
-      } else {
-        window.alert('¡Usuario o contraseña incorrectos!');
-      }
-    }
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`)
+      .then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
+   }
+
+   // function login(userData) {
+   //    if (userData.email === '' || userData.password === '') {
+   //      return window.alert('¡Completa los campos para poder ingresar!');
+   //    }
+   //    if (userData.password === PASSWORD && userData.email === EMAIL) {
+   //      localStorage.setItem('access', true);
+   //      setAccess(true);
+   //      /*
+   //      se actualiza el valor almacenado en el localStorage bajo la clave access con el valor true.
+   //       Luego se actualiza el estado local access con el valor true utilizando la función setAccess.
+   //      */
+   //      navigate('/home');
+   //    } else {
+   //      window.alert('¡Usuario o contraseña incorrectos!');
+   //    }
+   //  }
    function logout() {
       localStorage.removeItem('access');
       setAccess(false);
@@ -55,17 +66,18 @@ function App() {
     }
 
    function onSearch (id){
-      const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
-      const API_KEY = '2a5b6e80e805.066223a89f6c5f71a784';
+      const URL_BASE = 'http://localhost:3001/rickandmorty';
+      // const API_KEY = '2a5b6e80e805.066223a89f6c5f71a784';
 
-      if (characters.find((char) => char.id === id)){
-         return window.alert('¡Mmm , ese personaje ya lo buscaste!');
+      if (characters.find((char) => char.id == id)){
+         return alert('¡Mmm , ese personaje ya lo buscaste!');
         }
-      axios(`${URL_BASE}/${id}?key=${API_KEY}`).then(({ data }) => {
+      axios(`${URL_BASE}/character/${id}`)
+         .then(({ data }) => {
          if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
          } else {
-          return window.alert('¡Algo salió mal!');
+           alert('¡Algo salió mal!');
          }
       });
      }

@@ -1,0 +1,20 @@
+
+select {
+    background-color: #1509bb;
+    border: 2px solid #080000;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+    opacity: 75%;
+  }
+  
+  select option {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    opacity: 65%;
+  }
+  

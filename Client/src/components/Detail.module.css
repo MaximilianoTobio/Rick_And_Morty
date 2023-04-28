@@ -1,28 +1,51 @@
+ 
+ 
+ .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    background-color: transparent;
+    /* height: 100vh;
+    width: 100vw; */
+  }
+  .image{
+    display: flex;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.7); /* el último valor (0.7) indica la opacidad */
+    margin-top: 5px;
+    border-radius: 10%;
+    height: 400px;
+  }
+  .img {
+    display: flex;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
 
   .character_details {
     position: relative;
     display: inline-block;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     min-height: 75vh;
     min-width: 50vh;
-    background:#defa04;
+    background:transparent;
     border-radius: 20px;
     padding-bottom: 20px;
     padding-left: 5px;
     padding-right: 5px;
+    margin-top: 45px;
+
     
 
   }
-  
-  .character_details img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
+
   @font-face {
     font-family: 'Type';
     src: local('Type'), url('../OldNewspaperTypes.ttf') format('truetype');
@@ -31,6 +54,7 @@
   .character_details h3 {
     font-family: 'Type';
     font-size: 25px;
+    color:white ;
     padding-left: 20px;
     margin-top: 1rem;
     text-align: left;
@@ -56,6 +80,7 @@
     margin-top:0.5rem;
     text-align: left;
     padding-left: 25px;
+    color:white;
   }
 
 
@@ -78,7 +103,7 @@
     content: '';
     display: block;
     position:absolute;
-    top: 0;
+    top: 15px;
     left: 0;
     width: 10px;
     height: 10px;
@@ -95,7 +120,7 @@
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: 15px;
     left: 0;
     width: 10px;
     height: 10px;
@@ -103,7 +128,7 @@
     animation: blink-animation 1s infinite;
   }
   .status_alive {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
    padding: 5px 20px ; 
     font-size: 25px;
   }
@@ -111,13 +136,13 @@
   
    
   .status_death {
-    color: rgb(0, 0, 0);
+    color: rgb(254, 254, 254);
     padding: 5px 20px ;
     font-size: 25px;
   }
   .character_status {
     display: flex;
-    align-items: center;
+    text-align: right;
     background-color: transparent;
   }
   
@@ -136,18 +161,16 @@
   .custom_loader {
     width: 100px;
     height: 100px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #fe0101;
     border-radius: 50%;
-    background: repeating-conic-gradient(#defa04 0 90deg,transparent 0 180deg);
-    animation: s1 0.5s infinite linear;
-    position: fixed;
-    top: 40%;
-    left:41%;
-    opacity: 45%;
+    animation: spin 0.8s linear infinite;
+    
   }
   
-  
-  @keyframes s1 {
-    100% {transform: rotate(.5turn)}
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   
   

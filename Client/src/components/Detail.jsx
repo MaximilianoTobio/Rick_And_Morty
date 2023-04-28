@@ -6,10 +6,10 @@ import style from "./Detail.module.css";
 const Detail = () => {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
-  const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
-  const API_KEY = "2a5b6e80e805.066223a89f6c5f71a784";
+  const URL_BASE = 'http://localhost:3001/rickandmorty';
+  // const API_KEY = "2a5b6e80e805.066223a89f6c5f71a784";
   useEffect(() => {
-    axios(`${URL_BASE}/${id}?key=${API_KEY}`).then((response) => {
+    axios(`${URL_BASE}/character/${id}`).then((response) => {
       if (response.data.id) {
         setCharacter(response.data);
       } else {
@@ -20,8 +20,12 @@ const Detail = () => {
   }, [id]);
 
   return (
-    <div>
+    <>
+    
+    <div className={style.container}>
       {character.name ? (
+       <div className={style.image}>
+       <img src={character.image} alt="img" className={style.img}/>
         <div className={style.character_details}>
           <div className={style.character_status}>
             <h4
@@ -39,17 +43,18 @@ const Detail = () => {
               }
             ></span>
           </div>
-          <img src={character.image} alt="img" />
           <h3 id="animated-h3">{character.name}</h3>
 
           <p>Specie: {character.species}</p>
           <p>Gender: {character.gender}</p>
           <p>Origin: {character.origin?.name}</p>
         </div>
+        // </div>
       ) : (
         <div className={style.custom_loader}></div>
       )}
     </div>
+    </>
   );
 };
 
