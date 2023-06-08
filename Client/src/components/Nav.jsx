@@ -11,9 +11,6 @@ export default function Nav({ onSearch, logout }) {
   return (
     <>
     <div className={styles.nav}>
-     {/* <div className={styles.logout}>
-          <Link to="/about"className={styles.pulse}>About </Link>
-     </div> */}
      <div className={styles.logout}>
           <Link to="/favorites"className={styles.pulse}>Favorites</Link>
      </div>

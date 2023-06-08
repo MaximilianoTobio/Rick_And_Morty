@@ -8,11 +8,7 @@ export default function SearchBar({onSearch}) {
    
    const handleChange = (event) => {
       const value = event.target.value;
-      // if (value < 1 || value > 826) {
-      //   alert('Comienza por 1 y busca hasta el 826!');
-      //   event.target.value = '';
-      //    return;
-      // }
+   
       setId(value);
     };
 
@@ -39,26 +35,3 @@ export default function SearchBar({onSearch}) {
       </>
    );
 };
-
-         
-     /*
-      return (
-      <div>
-         <input type='text' onChange={handleChange}/>
-         <hr />
-         <button onClick={()=>{onSearch(id)}}>Agregar personajes</button>
-         <button onClick={()=>{
-            handleChangeRandom();
-            onSearch(random)}}
-         >Agrega un personaje aleatorio</button>
-      </div>
-         );
-             const handleChangeRandom = () => {
-      const valueRandom = Math.floor(Math.random() * 826)+1;
-      setRandom(valueRandom.toString());
-    };
-    const [random, setRandom] = useState((Math.floor(Math.random() * 826) + 1).toString());
-    
-     
-     
-     */
