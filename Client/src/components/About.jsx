@@ -6,6 +6,7 @@ export default function About(){
     return (
         <div>
             <img src={inprogress} alt="img" />
+            <h1>About</h1>
         </div>
     )
 };
